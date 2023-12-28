@@ -1,66 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# My Notes
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is a fullstack application built on laravel 10v (restful apis) / vue.js 3 (spa)
 
-## About Laravel
+## Features of RESTful APIs
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+-   Authentication with sunctum
+    -   login
+    -   register
+    -   reset password with email (sendgrid service)
+-   get all notes
+-   create new note
+-   update note
+-   delete note
+-   print note
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Documentation for api
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+[Documentation on postman link](https://documenter.getpostman.com/view/27529827/2s9YkuZdZ4)
 
-## Learning Laravel
+## Screenshots
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![App Screenshot](https://lh3.googleusercontent.com/drive-viewer/AEYmBYQkwu2XHRidPhVAXrJL2ZP9e3uzcid5AgOPeT4fwB9sl05CIL1ri0G21uawX5-lvfYyQLxYmGt6Qrlhv95bOXE3S76m9g=w1530-h752)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![App Screenshot](https://lh3.googleusercontent.com/drive-viewer/AEYmBYTa-zkBlFFk-7MMk8iFpmHJRZsCSTNPb5D3QSwQljb0l1Y0BnGM1qd-CDrok2GiKdldcoFI9_TU7EHXsv_3ycagB0pIFA=w1530-h752)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![App Screenshot](https://lh3.googleusercontent.com/drive-viewer/AEYmBYSzxoZi-ieuBVsZHEf2ijfy934ZWgqVdLPpT-3FMkX4PStmZyjAg9L2alAXpmbZOLpy2CD-VHO8-o3CDJRT2p-FAYDG=w765-h752)
 
-## Laravel Sponsors
+![App Screenshot](https://lh3.googleusercontent.com/drive-viewer/AEYmBYTqGhrahZz1xo0vC4HEda3jAQAbAIVEjZCKB3AER6zAeI543SB4SxWQz9T6cTi3X8FNeD9yp8UqrPWxxRIr3-8DGAyvIQ=w765-h752)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+![App Screenshot](https://lh3.googleusercontent.com/drive-viewer/AEYmBYTwfGo-K_lxLcs5DG93R6oo5djzi8cwz2KpAyLv6Gkr17P92i2WllVziAyh_lilEWy7dUGqpmO3sykE-PZm6Lvb3wcCrQ=w765-h752)
 
-### Premium Partners
+![App Screenshot](https://lh3.googleusercontent.com/drive-viewer/AEYmBYR6N1JX4Lx9-eTlFwh6-4ow0RxF8x-mhMhaETPZNEfQkV7Od2gXyrh_WG2t2LhzD6TZPFS7pziSYAB2hOo4ieey3bkBXQ=w765-h752)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+![App Screenshot](https://lh3.googleusercontent.com/drive-viewer/AEYmBYSC4it9-TMM95WnM2mEqudLYitefsYpzq3JAWpiz19K3N0FDfCxOVVpdFmpgtstMH6nuM242dgPrz2za44Bmv1kxfF0=w765-h752)
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![App Screenshot](https://lh3.googleusercontent.com/drive-viewer/AEYmBYSk3Qr2SW0wtGHGFpTqnUEL94oUI2ZA5dq6i3HQ-yQgrhny3ja23KObmLGo0087SnPHkNLybi6y1nEYMI9aJYJjgwlY1A=w765-h752)
