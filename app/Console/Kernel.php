@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -13,6 +14,13 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+        $schedule->call(function () {
+            collect(Storage::listContents('public/486532pdf'))->each(function($file) {
+                        if($file['lastModified'] < now()->subMinutes(30)->getTimestamp()) {
+                            Storage::delete($file['path']);
+                        }
+                });
+        })->everyThirtyMinutes();
     }
 
     /**

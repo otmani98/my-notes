@@ -24,6 +24,8 @@ Route::post('/forgotPassword', [AuthController::class, 'forgotPassword']);
 Route::patch('/resetPassword/{resetToken}', [AuthController::class, 'resetPassword']);
 
 
+
+
 //protected routes
 Route::group(['middleware' => ['auth:sanctum']], function ()  {
 
@@ -42,5 +44,8 @@ Route::group(['middleware' => ['auth:sanctum']], function ()  {
     Route::patch('/notes/{id}', [NoteController::class, 'update'])->where('id', '[0-9]+');
 
     Route::delete('/notes/{id}', [NoteController::class, 'destroy'])->where('id', '[0-9]+');
+
+    Route::get('/notes/print/{id}', [NoteController::class, 'print']);
+
 
 });

@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel

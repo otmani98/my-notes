@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Exceptions\GeneralJsonException;
-use App\Http\Resources\NoteResource;
-use App\Models\Note;
 use \Mpdf\Mpdf;
-use Illuminate\Support\Facades\Storage;
+use App\Models\Note;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Resources\NoteResource;
+use Illuminate\Support\Facades\Storage;
+use App\Exceptions\GeneralJsonException;
 
 class NoteController extends Controller
 {
@@ -95,6 +96,48 @@ class NoteController extends Controller
         $note->delete();
 
         return response()->json(null,204);
+    }
+
+    public function print(string $id)
+
+    {
+        $note = Note::find($id);
+
+        if (!$note || auth()->user()->id !== $note->user_id) {
+            throw new GeneralJsonException('note not found', 404);
+        }
+
+        $randomName = Str::random(85) . '.pdf';
+
+        $mpdf = new \Mpdf\Mpdf();
+
+        $mpdf->WriteHTML(\View::make('print', [
+            'title' => $note->title,
+            'content' => $note->content,
+            'created' => $note->created_at,
+            'updated' => $note->updated_at,
+        ]));
+
+        Storage::disk('public')->put('486532pdf/' . $randomName, $mpdf->Output($randomName, "S"));
+
+        $access_link = request()->getSchemeAndHttpHost() . '/pdfs/' . $randomName;
+
+        return response()->json([
+            'status' => 'success',
+            'access_link' => $access_link
+        ]);
+
+    }
+
+    public function getPdf(string $name)
+    {
+
+        $header = [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="'.$name.'"'
+        ];
+
+        return Storage::disk('public')->download('486532pdf/'.$name, 'Request', $header);
     }
 
 }

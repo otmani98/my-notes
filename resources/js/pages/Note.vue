@@ -53,6 +53,24 @@ const updateHere = (data) => {
     theNote.created_at = data.created_at;
     theNote.updated_at = data.updated_at;
 };
+
+const printNote = async () => {
+    toast.info("please wait..until print the note", { position: "top-center" });
+    try {
+        let res = await axios.get(`/api/notes/print/${route.params.id}`, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        });
+
+        if (res.data.status === "success") {
+            toast("the note printed succefully");
+            window.open(res.data.access_link, "_blank");
+        }
+    } catch (error) {
+        toast.error(error.response.data);
+    }
+};
 </script>
 
 <template>
@@ -81,7 +99,7 @@ const updateHere = (data) => {
                 <div class="tool" @click="showDeleteNote = true">
                     <img src="../media/icons8-delete-64.png" alt="" />
                 </div>
-                <div class="tool">
+                <div class="tool" @click="printNote">
                     <img src="../media/icons8-print-50.png" alt="" />
                 </div>
             </div>
